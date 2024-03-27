@@ -1,3 +1,11 @@
+<?php
+include_once "function.php"
+$menu=getMenuData(type:"heaer");
+$theme=$_GET["theme"]
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,17 +17,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <header class="container main-header">
-        <div>
-          <a href="index.html">
+    <header style='backgroud-color:<?php echo $theme === "dark"?"grey" :"white";?>' class="container main-header">
+        <div class="logo-holder">
+          <a href='<?php echo $menu ["name"] ["path"];?>'>
             <img src="img/logo.png" height="40">
           </a>
         </div>
       <nav class="main-nav">
-        <ul class="main-menu" id="main-menu">
+        <ul class="main-menu" id="main-menu container">
+            <li><a href="<?php echo $theme ==='dark'? 'theme=light':'?theme=dark';?>">Spustit funkciu</a></li>
             <li><a href="index.html">Domov</a></li>
             <li><a href="portfolio.html">Portfólio</a></li>
-            <li><a href="qna.html">Q&A</a></li>
+            <li><a href="qna.php">Q&A</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
         <a class="hamburger" id="hamburger">
