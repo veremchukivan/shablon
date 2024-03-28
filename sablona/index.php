@@ -17,12 +17,15 @@ if(isset($_GET["theme"])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
-            background-color: <?php echo $theme === "dark" ? "black" : "white"; ?>;
+            background-color: <?php echo $theme === "grey" ? "black" : "white"; ?>;
+        }
+        .selector main{
+          background-color: <?php echo $theme === "grey" ? "black" : "white"; ?>;
         }
     </style>
 </head>
 <body>
-    <header class="container main-header" style="background-color: <?php echo $theme === "dark" ? "black" : "white"; ?>;">
+    <header class="container main-header" style="background-color: <?php echo $theme === "grey" ? "black" : "white"; ?>;">
         <div class="logo-holder">
           <a href='/'>
             <img src="img/logo.png" height="40">
