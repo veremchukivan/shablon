@@ -18,12 +18,11 @@ if(isset($_GET["theme"])) {
     <style>
         body {
             background-color: <?php echo $theme === "dark" ? "black" : "white"; ?>;
-            color: <?php echo $theme === "dark" ? "white" : "black"; ?>;
         }
     </style>
 </head>
 <body>
-    <header class="container main-header">
+    <header class="container main-header" style="background-color: <?php echo $theme === "dark" ? "black" : "white"; ?>;">
         <div class="logo-holder">
           <a href='/'>
             <img src="img/logo.png" height="40">
